@@ -6,7 +6,8 @@ export const colors = {
     colorTitle: '#0069A6',
     colorSection: '#F3DA46',
     colorCard: '#EDE9E9',
-    colorFooter: '#C3DBF5'
+    colorFooter: '#C3DBF5',
+    white: ' #FFFFFF',
 }
 
 export const GlobalStyle = createGlobalStyle`

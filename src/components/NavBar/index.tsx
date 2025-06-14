@@ -1,0 +1,84 @@
+import { useState } from 'react';
+import logo from '../../assets/logo.png';
+import { colors } from '../../styles/GlobalStyle'; // caminho ajusta conforme o seu projeto
+
+const NavBar = () => {
+    const [menuOpen, setMenuOpen] = useState(false);
+
+    const links = [
+        { href: '#inicio', label: 'Início' },
+        { href: '#sobre', label: 'Sobre' },
+        { href: '#projetos', label: 'Projetos' },
+        { href: '#depoimentos', label: 'Depoimentos' },
+        { href: '#doacao', label: 'Faça uma doação' },
+        { href: '#contato', label: 'Contato' },
+    ];
+
+    return (
+        <nav className="bg-white w-full shadow-md z-50 relative font-[Montserrat] pt-6">
+        <div className="container mx-auto px-4 py-3 flex items-center justify-around">
+            {/* Logo */}
+            <img src={logo} alt="Logo" className="h-20 w-auto" />
+
+            {/* Botão mobile */}
+            <button
+            className="lg:hidden"
+            onClick={() => setMenuOpen(!menuOpen)}
+            aria-label="Abrir menu"
+            style={{ color: colors.colorButton }}
+            >
+            {menuOpen ? (
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            ) : (
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            )}
+            </button>
+
+            {/* Links - desktop */}
+            <ul
+            className="hidden lg:flex rounded-full p-6 gap-8 text-white font-medium text-sm"
+            style={{ backgroundColor: colors.colorMenu, padding: '14px' }}
+            >
+            {links.map((link) => (
+                <li key={link.href}>
+                <a
+                    href={link.href}
+                    className="block px-6 py-2"
+                >
+                    {link.label}
+                </a>
+                </li>
+            ))}
+            </ul>
+        </div>
+
+        {/* Menu mobile */}
+        {menuOpen && (
+            <div
+            className="lg:hidden text-white font-medium text-center py-4"
+            style={{ backgroundColor: colors.colorMenu }}
+            >
+            <ul className="flex flex-col gap-4">
+                {links.map((link) => (
+                <li key={link.href}>
+                    <a
+                    href={link.href}
+                    className="block px-6 py-2 hover:underline"
+                    onClick={() => setMenuOpen(false)}
+                    >
+                    {link.label}
+                    </a>
+                </li>
+                ))}
+            </ul>
+            </div>
+        )}
+        </nav>
+    );
+};
+
+export default NavBar;
