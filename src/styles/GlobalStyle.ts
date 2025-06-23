@@ -9,6 +9,10 @@ export const colors = {
     colorFooter: '#C3DBF5',
     white: ' #FFFFFF',
 }
+export const font = {
+    secondaryFont: '"ADLaM Display", system-ui',
+    primary: 'Montserrat Alternates", sans-serif'
+}
 
 export const GlobalStyle = createGlobalStyle`
     * {
