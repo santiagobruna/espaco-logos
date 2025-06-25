@@ -5,7 +5,7 @@ import { HeroSection, Title, HeroImageWrapper, CtaButton } from './style';
 import { PipaImg, NuvemImg } from '../../styles/GlobalStyle';
 const Hero = () => {
     return (
-    <div>
+    <div id='inicio'>
             <HeroSection>
                 <PipaImg src={pipa} alt="Pipa" />
                 <Title>

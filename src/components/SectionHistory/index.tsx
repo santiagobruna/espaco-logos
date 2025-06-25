@@ -3,7 +3,7 @@ import espaco from '../../assets/espaco-logos.jpeg';
 import { ImageContainer, LivrosImg, SectionHistoryContainer, TituloWrapper } from './style';
 const SectionHistory = () => {
     return (
-        <SectionHistoryContainer className="section-history">
+        <SectionHistoryContainer className="section-history" id='history-about'>
             <div>
                 <TituloWrapper>
                     <LivrosImg src={livros} alt="" />
