@@ -1,5 +1,5 @@
 import { createGlobalStyle } from "styled-components";
-
+import styled from "styled-components";
 export const colors = {
     colorMenu: '#4283AF',
     colorButton: '#1D649B',
@@ -22,3 +22,22 @@ export const GlobalStyle = createGlobalStyle`
         font-family: "Montserrat", sans-serif;
     }
 `
+export const PipaImg = styled.img`
+    width: 92px;
+    @media (max-width: 768px) {
+        display: none;
+    }
+    @media (min-width: 768px) and (max-width: 1023px) {
+        width: 78px; /* menor nas telas médias */
+    }
+`;
+
+export const NuvemImg = styled.img`
+    width: 92px;
+    @media (max-width: 768px) {
+        display: none;
+    }
+    @media (min-width: 768px) and (max-width: 1023px) {
+        width: 78px; 
+    }
+`;

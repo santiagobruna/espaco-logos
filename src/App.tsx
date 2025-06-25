@@ -1,5 +1,6 @@
 import Hero from "./components/Hero"
 import NavBar from "./components/NavBar"
+import SectionHistory from "./components/SectionHistory"
 import { GlobalStyle } from "./styles/GlobalStyle"
 
 function App() {
@@ -8,6 +9,7 @@ function App() {
       <GlobalStyle/>
       <NavBar/>
       <Hero/>
+      <SectionHistory/>
     </>
   )
 }

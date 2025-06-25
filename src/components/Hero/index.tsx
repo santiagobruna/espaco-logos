@@ -1,7 +1,8 @@
 import pipa from '../../assets/kite-flying.png';
 import nuvem from '../../assets/clouds.png';
 import hero from '../../assets/hero.jpg';
-import { HeroSection, Title, PipaImg, NuvemImg, HeroImageWrapper, CtaButton } from './style';
+import { HeroSection, Title, HeroImageWrapper, CtaButton } from './style';
+import { PipaImg, NuvemImg } from '../../styles/GlobalStyle';
 const Hero = () => {
     return (
     <div>
