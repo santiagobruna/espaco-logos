@@ -11,6 +11,9 @@ export const SectionHistoryContainer = styled.section`
     h2 {
         font-size: 26px;
         font-weight: bold;
+        @media (max-width: 767px) {
+            font-size: 18px;
+        }
     }
     p {
         max-width: 600px;
@@ -22,7 +25,6 @@ export const SectionHistoryContainer = styled.section`
     @media (max-width: 768px) {
         flex-direction: column;
         padding: 0 16px;
-       
     }
     @media (min-width: 768px) and (max-width: 1023px) {
         flex-direction: column;

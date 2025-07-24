@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { colors, font } from "../../styles/GlobalStyle";
+import { colors } from "../../styles/GlobalStyle";
 
 export const HeroSection = styled.section`
     display: flex;
@@ -20,20 +20,6 @@ export const HeroSection = styled.section`
     }
 `;
 
-export const Title = styled.h1`
-    font-family: ${font.secondaryFont} !important;
-    color: ${colors.colorTitle};
-    font-size: 54px;
-
-    @media (max-width: 767px) {
-        font-size: 34px;
-        text-align: center;
-    }
-    @media (min-width: 768px) and (max-width: 1023px) {
-        font-size: 38px;
-        text-align: center;
-    }
-`
 export const HeroImageWrapper = styled.div`
     position: relative;
     width: 100%;
