@@ -33,6 +33,14 @@ export const GlobalStyle = createGlobalStyle`
         padding-top: 40px;
         text-align: center;
     }
+    .impact-info {
+        max-width: 1200px;
+        width: 100%; 
+        @media (min-width: 768px) and (max-width: 1023px) {
+            width: 100%;
+            padding: 0 20px;
+        }
+    }
 `
 export const PipaImg = styled.img`
     width: 92px;

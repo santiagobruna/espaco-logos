@@ -2,6 +2,7 @@ import Hero from "./components/Hero"
 import NavBar from "./components/NavBar"
 import Projects from "./components/Projects"
 import SectionHistory from "./components/SectionHistory"
+import SectionImpact from "./components/SectionImpact"
 import { GlobalStyle } from "./styles/GlobalStyle"
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
       <Hero/>
       <SectionHistory/>
       <Projects/>
+      <SectionImpact/>
     </>
   )
 }

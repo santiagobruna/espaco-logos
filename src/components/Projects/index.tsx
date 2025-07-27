@@ -1,6 +1,6 @@
 import { Title } from "../../styles/GlobalStyle";
 import { Paragraph } from "./style";
-import SectionBlock from "../SectionBlock";
+import SectionBlock from "../../containers/SectionBlock";
 
 import imgCognitivo from '../../assets/alphabet.png';
 import imgEsportivo from '../../assets/trophy.png';
