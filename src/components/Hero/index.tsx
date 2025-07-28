@@ -5,6 +5,12 @@ import { HeroSection, HeroImageWrapper, CtaButton } from './style';
 import { Title } from '../../styles/GlobalStyle';
 import { PipaImg, NuvemImg } from '../../styles/GlobalStyle';
 const Hero = () => {
+    const handleScrollToDoacao = () => {
+    const doacaoSection = document.getElementById('doacao');
+    if (doacaoSection) {
+        doacaoSection.scrollIntoView({ behavior: 'smooth' });
+    }
+    };
     return (
     <div id='inicio'>
             <HeroSection>
@@ -17,7 +23,7 @@ const Hero = () => {
             </HeroSection>
             <HeroImageWrapper>
                 <img src={hero} alt="Banner" />
-                <CtaButton>Faça parte da mudança</CtaButton>
+                <CtaButton onClick={handleScrollToDoacao}>Faça parte da mudança</CtaButton>
             </HeroImageWrapper>
     </div>
     )
