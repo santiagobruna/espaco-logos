@@ -3,7 +3,7 @@ import { FaWhatsapp, FaEnvelope, FaGlobe, FaMapMarkerAlt } from 'react-icons/fa'
 import logo from '../../assets/logo.png';
 const Footer = () => {
     return (
-        <ContainerFooter>
+        <ContainerFooter id="contato">
             <div className="top-footer">
                 <div>
                     <a href="#inicio">

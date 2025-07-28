@@ -7,6 +7,7 @@ export const colors = {
     colorSection: '#F3DA46',
     colorCard: '#EDE9E9',
     colorFooter: '#C3DBF5',
+    colorCardDepoiments: '#E2E2E2',
     white: ' #FFFFFF',
 }
 export const font = {

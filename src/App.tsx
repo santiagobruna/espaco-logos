@@ -1,4 +1,5 @@
 import SectionDoacao from "./components/Contribution"
+import Depoimentos from "./components/Depoiments"
 import Footer from "./components/Footer"
 import Hero from "./components/Hero"
 import NavBar from "./components/NavBar"
@@ -16,6 +17,7 @@ function App() {
       <SectionHistory/>
       <Projects/>
       <SectionImpact/>
+      <Depoimentos/>
       <SectionDoacao/>
       <Footer/>
     </>
