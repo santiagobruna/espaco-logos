@@ -46,7 +46,7 @@ export const SideImagesWrapper = styled.div`
     display: flex;
     flex-direction: column;
     gap: 20px;
-
+    cursor: pointer;
     img {
         width: 100%;
         max-width: 420px;

@@ -37,6 +37,7 @@ export const ImageContainer = styled.div`
         height: auto;
         border-radius: 50px;
         border: 2px solid ${colors.colorTitle};
+        cursor: pointer;
     }
 
 `

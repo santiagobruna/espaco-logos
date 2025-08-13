@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-scroll'; // Importando Link do react-scroll
 import logo from '../../assets/logo.png';
 import { colors } from '../../styles/GlobalStyle'; 
 
@@ -6,20 +7,25 @@ const NavBar = () => {
     const [menuOpen, setMenuOpen] = useState(false);
 
     const links = [
-        { href: '#inicio', label: 'Início' },
-        { href: '#history-about', label: 'Sobre' },
-        { href: '#projetos', label: 'Projetos' },
-        { href: '#nosso-impacto', label: 'Nosso Impacto' },
-        { href: '#depoimentos', label: 'Depoimentos' },
-        { href: '#doacao', label: 'Faça uma doação' },
-        { href: '#contato', label: 'Contato' },
+        { href: 'inicio', label: 'Início' },
+        { href: 'history-about', label: 'Sobre' },
+        { href: 'projetos', label: 'Projetos' },
+        { href: 'nosso-impacto', label: 'Nosso Impacto' },
+        { href: 'depoimentos', label: 'Depoimentos' },
+        { href: 'doacao', label: 'Faça uma doação' },
+        { href: 'contato', label: 'Contato' },
     ];
 
     return (
         <nav className="bg-white w-full shadow-md z-50 relative font-[Montserrat] pt-6">
             <div className="mx-auto px-4 py-3 flex items-center justify-around">
                 {/* Logo */}
-                <img src={logo} alt="Logo" className="h-20 w-auto" />
+                <Link to={links[1].href} className='cursor-pointer' 
+                spy={true} 
+                smooth={true} 
+                duration={500}>
+                    <img src={logo} alt="Logo" className="h-20 w-auto" />
+                </Link>
 
                 {/* Botão mobile */}
                 <button
@@ -46,12 +52,15 @@ const NavBar = () => {
                 >
                 {links.map((link) => (
                     <li key={link.href}>
-                    <a
-                        href={link.href}
-                        className="block px-6 py-2"
+                    <Link
+                        to={link.href} 
+                        spy={true} 
+                        smooth={true} 
+                        duration={500} 
+                        className="block px-6 py-2 cursor-pointer"
                     >
                         {link.label}
-                    </a>
+                    </Link>
                     </li>
                 ))}
                 </ul>
@@ -66,13 +75,17 @@ const NavBar = () => {
                 <ul className="flex flex-col gap-4">
                     {links.map((link) => (
                     <li key={link.href}>
-                        <a
-                        href={link.href}
+                        <Link
+                        to={link.href}
+                        spy={true}
+                        smooth={true}
+                        duration={500}
+                        offset={-70}
                         className="block px-6 py-2 hover:underline"
                         onClick={() => setMenuOpen(false)}
                         >
                         {link.label}
-                        </a>
+                        </Link>
                     </li>
                     ))}
                 </ul>
